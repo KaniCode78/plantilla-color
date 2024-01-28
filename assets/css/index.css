@@ -1,46 +1,101 @@
-body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: bisque;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
 }
 
-.navbar {
-    background-color: rgb(235, 175, 175);
-    overflow: hidden;
+ul {
+    list-style: none;
 }
 
-.navbar-menu {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar-item {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    color: #1bca44;
-}
-
-.navbar-item:hover {
-    background-color: #444;
-}
-
-.menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    display: none;
-}
-
-.menu-item {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #d21111;
+a {
     text-decoration: none;
 }
 
-.menu-item:hover {
-    background-color: #444;
+/*comienza el header */
+
+header {
+
+    background-color: none;
+}
+
+
+.menu-burger {
+    display: none;
+
+    width: 100%;
+    text-align: center;
+}
+
+.menu-burger ul li {
+    padding: 15px 0;
+}
+
+.menu-burger ul li a {
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.boton {
+    background-color: none;
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Transición suave al desplegar el menú */
+.menu-burger {
+    /* ...otros estilos... */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.menu-burger {
+    max-height: 500px;
+    /* Ajustar este valor según la altura máxima del menú */
+}
+
+/* Cambio de color al pasar el cursor sobre los enlaces del menú */
+.menu-burger ul li a:hover {
+    color: #ff9800;
+}
+
+/* Rotar el icono de la hamburguesa al abrir el menú */
+.boton span.rotar {
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+/* Estilos del menú horizontal para pantallas grandes */
+@media (min-width: 768px) {
+    .boton {
+        
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+        background-color: transparent;
+        max-height: initial;
+        overflow: initial;
+    }
+
+    .menu-burger ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-burger ul li {
+        padding: 10px 20px;
+    }
 }
