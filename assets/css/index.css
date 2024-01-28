@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: bisque;
+}
+
+.navbar {
+    background-color: rgb(235, 175, 175);
+    overflow: hidden;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: #1bca44;
+}
+
+.navbar-item:hover {
+    background-color: #444;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    display: none;
+}
+
+.menu-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #d21111;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #444;
+}
